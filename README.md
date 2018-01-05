@@ -4,7 +4,7 @@
 
 Toddlers are fascinated by mobile devices before they can even speak. Word Rumpus buils on this natural curiosity to introduce children to letters in a playful way.
 
-! [screenshot](screenshot.png)
+![screenshot](screenshot.png)
 
 ### Gameplay:
 * Users can collect emojis buy spelling them correctly on a keyboard of random letters
