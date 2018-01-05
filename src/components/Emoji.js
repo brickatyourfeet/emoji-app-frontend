@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FadeIn from 'react-fade-in'
+
 const API = process.env.REACT_APP_API_URL
 
 class Emoji extends Component {
@@ -27,7 +27,7 @@ class Emoji extends Component {
                   return this.state.userCollection.includes(emoji.id) ?
                    ( <span key={id} className="emoji-container">
                    <span className="emoji-small" role="img" aria-label={emoji.name}>{emoji.image}</span>
-                  </span> 
+                  </span>
                   ) : ''
                 })}
             </div>

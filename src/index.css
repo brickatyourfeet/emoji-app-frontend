@@ -88,7 +88,7 @@ body {
 
 .back {
   transform: rotateY(180deg);
- 
+
 }
 
 .profile {
@@ -113,4 +113,8 @@ body {
 
 .choose-avatar {
   font-size: 1rem;
+}
+
+#quiz-emoji {
+  margin-right: 20%;
 }

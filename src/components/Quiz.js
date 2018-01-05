@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Keyboard from './Keyboard'
 import FadeIn from 'react-fade-in'
-import {Button, Row, Col} from 'react-materialize'
+import {Button, Row} from 'react-materialize'
 import QuizEmoji from './QuizEmoji'
 import WinQuiz from './WinQuiz'
 

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import Keyboard from './components/Keyboard.js'
 import Auth0Lock from 'auth0-lock'
-import {Button} from 'react-materialize'
 import Header from './components/Header.js'
 import Landing from './components/Landing'
 import Dash from './components/Dash'
@@ -45,7 +43,7 @@ class App extends Component {
   }
 
   checkForUser = async (profile) => {
-    let userExists = await fetch(`${API}/users`,                     
+    let userExists = await fetch(`${API}/users`,
                                   {body: JSON.stringify({email: profile.email}),
                                   method: 'POST',
                                   headers: {'Content-Type': 'application/json'}

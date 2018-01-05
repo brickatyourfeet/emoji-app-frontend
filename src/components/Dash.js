@@ -3,9 +3,8 @@ import Quiz from './Quiz'
 import Emoji from './Emoji'
 import Story from './Story'
 import Profile from './Profile'
-import {Card, CardTitle, Button} from 'react-materialize'
+import {Button} from 'react-materialize'
 import FadeIn from 'react-fade-in'
-import Spinner from './Spinner'
 const API = process.env.REACT_APP_API_URL
 
 class Dash extends Component {
@@ -107,12 +106,13 @@ class Dash extends Component {
   }
 
   winEmoji = async (userId, emojiId) => {
-    let response = await fetch(`${API}/users/${userId}`,
+    await fetch(`${API}/users/${userId}`,
                                {body: JSON.stringify({emoji_id: emojiId}),
                                 method: 'POST',
                                 headers: {'Content-Type': 'application/json'}
                                 })
-    let json = await response.json()
+    // Response is not used!
+    // let json = await response.json()
     await this.refreshUserCollection(userId)
     // After posting, setState with new collection
   }

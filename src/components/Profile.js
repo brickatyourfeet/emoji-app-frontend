@@ -33,7 +33,7 @@ class Profile extends Component {
     this.setState({...currentState, avatar: true})
   }
   renderAvatar = (user) => {
-    return this.state.avatarEmoji ? <span className="animated fadeInUpBig">{this.state.avatarEmoji} </span> : <img className= "profile avatar" src = {user.picture}></img>
+    return this.state.avatarEmoji ? <span className="animated fadeInUpBig">{this.state.avatarEmoji} </span> : <img className= "profile avatar" alt="profile avatar" src = {user.picture}></img>
   }
 
   async componentDidMount() {
@@ -43,7 +43,7 @@ class Profile extends Component {
   }
 
   render(){
-    const {user, userCollection, allEmoji, userInfo} = this.props
+    const {user, userCollection, allEmoji} = this.props
     return (
       <Row>
         <Col className="container offset-m3" m={6} s={12}>
@@ -60,8 +60,9 @@ class Profile extends Component {
             </Card>
           </div>
         </Col>
-        {this.state.avatar && <ProfileAvatars allEmoji={allEmoji}
-                                              postAvatar={this.postAvatar}/>}
+        {this.state.avatar && <ProfileAvatars
+          allEmoji={allEmoji}
+          postAvatar={this.postAvatar}/>}
      </Row>
     )
   }
