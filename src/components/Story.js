@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import '../App.css'
+import FadeIn from 'react-fade-in'
 
 const API = process.env.REACT_APP_API_URL
-
-import FadeIn from 'react-fade-in'
 
 class Story extends Component {
   constructor(props) {
@@ -99,7 +98,7 @@ randomize = (array) => {
       setTimeout(() => this.setState(situation), 1500)
     }
   }
-  
+
 //////////////////////
 // DATA & RENDERING //
 //////////////////////
