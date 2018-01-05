@@ -8,7 +8,7 @@ class Profile extends Component {
     super(props)
     this.state = {userInfo: this.props.userInfo, avatar:false, avatarEmoji: this.props.userInfo.avatar}
   }
-  
+
   componentWillReceiveProps(){
     const currentState = Object.assign({}, this.state)
     if(this.props.userInfo.avatar) this.setState({...currentState, userInfo: this.props.userInfo, avatarEmoji: this.props.userInfo.avatar})
@@ -52,7 +52,7 @@ class Profile extends Component {
               <CardPanel className="pink white-text">
                 <h4>Welcome, {user.nickname}!</h4>
               </CardPanel>
-            <h6>You have collected <Chip>{userCollection.length}/{allEmoji.length}</Chip> emoji.</h6>
+            <h5>You have collected <Chip>{userCollection.length}/{allEmoji.length}</Chip> emoji.</h5>
             {this.renderAvatar(user)}
             <Row>
             {this.renderAvatarButton()}
